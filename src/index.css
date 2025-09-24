@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Coffee-inspired design system based on NEJMT HOUR Café logo colors */
+
+@layer base {
+  :root {
+    /* Coffee-inspired palette from NEJMT HOUR Café logo */
+    --background: 32 25% 97%;          /* Soft cream background */
+    --foreground: 28 45% 12%;          /* Deep coffee brown */
+
+    --card: 32 35% 95%;                /* Light cream cards */
+    --card-foreground: 28 45% 12%;     /* Deep coffee brown text */
+
+    --popover: 32 35% 95%;
+    --popover-foreground: 28 45% 12%;
+
+    --primary: 28 45% 12%;             /* Deep coffee brown */
+    --primary-foreground: 32 25% 97%; /* Soft cream on primary */
+
+    --secondary: 28 35% 55%;           /* Warm coffee medium */
+    --secondary-foreground: 32 25% 97%;
+
+    --muted: 35 25% 85%;               /* Cream latte */
+    --muted-foreground: 28 35% 35%;    /* Medium coffee */
+
+    --accent: 35 40% 75%;              /* Warm cream accent */
+    --accent-foreground: 28 45% 12%;   /* Deep coffee on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 88%;              /* Light coffee border */
+    --input: 35 20% 88%;
+    --ring: 28 45% 12%;                /* Deep coffee focus ring */
+
+    --radius: 0.75rem;                 /* Slightly more rounded */
+
+    /* Coffee shop specific colors */
+    --coffee-dark: 28 45% 12%;         /* #3D2914 - Deep coffee brown */
+    --coffee-medium: 28 35% 55%;       /* #8B5A3C - Warm coffee */  
+    --coffee-light: 35 40% 75%;        /* #D4B896 - Cream latte */
+    --coffee-cream: 32 25% 97%;        /* #F5F2ED - Soft cream */
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--coffee-cream)), hsl(var(--coffee-light)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--coffee-light) / 0.3));
+    
+    /* Shadows */
+    --shadow-coffee: 0 10px 25px -5px hsl(var(--coffee-dark) / 0.1);
+    --shadow-coffee-lg: 0 20px 40px -10px hsl(var(--coffee-dark) / 0.15);
+
+    --sidebar-background: 32 35% 95%;
+    --sidebar-foreground: 28 45% 12%;
+    --sidebar-primary: 28 45% 12%;
+    --sidebar-primary-foreground: 32 25% 97%;
+    --sidebar-accent: 35 25% 85%;
+    --sidebar-accent-foreground: 28 45% 12%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 28 45% 12%;
+  }
+
+  .dark {
+    --background: 28 50% 8%;           /* Very dark coffee */
+    --foreground: 32 25% 97%;          /* Soft cream */
+
+    --card: 28 45% 12%;                /* Deep coffee cards */
+    --card-foreground: 32 25% 97%;
+
+    --popover: 28 45% 12%;
+    --popover-foreground: 32 25% 97%;
+
+    --primary: 32 25% 97%;             /* Soft cream primary */
+    --primary-foreground: 28 45% 12%;
+
+    --secondary: 28 35% 25%;           /* Dark coffee secondary */
+    --secondary-foreground: 32 25% 97%;
+
+    --muted: 28 30% 20%;               /* Dark muted coffee */
+    --muted-foreground: 35 20% 70%;
+
+    --accent: 28 35% 25%;              /* Dark coffee accent */
+    --accent-foreground: 32 25% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 32 25% 97%;
+
+    --border: 28 30% 20%;              /* Dark coffee border */
+    --input: 28 30% 20%;
+    --ring: 32 25% 97%;
+
+    /* Dark mode coffee colors */
+    --coffee-dark: 32 25% 97%;         /* Inverted to cream */
+    --coffee-medium: 35 40% 75%;       /* Light coffee */
+    --coffee-light: 28 35% 55%;        /* Medium coffee */
+    --coffee-cream: 28 45% 12%;        /* Inverted to dark */
+    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--coffee-cream)), hsl(var(--coffee-medium) / 0.3));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--coffee-light) / 0.2));
+    
+    --shadow-coffee: 0 10px 25px -5px hsl(0 0% 0% / 0.3);
+    --shadow-coffee-lg: 0 20px 40px -10px hsl(0 0% 0% / 0.4);
+
+    --sidebar-background: 28 45% 12%;
+    --sidebar-foreground: 32 25% 97%;
+    --sidebar-primary: 32 25% 97%;
+    --sidebar-primary-foreground: 28 45% 12%;
+    --sidebar-accent: 28 30% 20%;
+    --sidebar-accent-foreground: 32 25% 97%;
+    --sidebar-border: 28 30% 20%;
+    --sidebar-ring: 32 25% 97%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    text-align: right;
+  }
+
+  [dir="ltr"] {
+    text-align: left;
+  }
+}
+
+@layer components {
+  /* Coffee shop specific component styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .coffee-shadow {
+    box-shadow: var(--shadow-coffee);
+  }
+  
+  .coffee-shadow-lg {
+    box-shadow: var(--shadow-coffee-lg);
+  }
+  
+  /* Smooth transitions */
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Arabic font support */
+  .font-arabic {
+    font-family: 'Noto Sans Arabic', 'Segoe UI', 'Tahoma', sans-serif;
+  }
+}
