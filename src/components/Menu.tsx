@@ -4,10 +4,13 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import {berrycheesecake, bluemohito, cheesecake, cheesecakestraw, chocolatecake, spanishlatte, hotcaramyl,
   chocolatecake2, chocolatecookies, pomemohito, kenzaorange, kenzalemon, flatwhite, cortado, frenchcoffee,
   cookies2, cupcake, mohito, mohito2, redmohito, strawberry, whitemohito, cappuchino, hotchocolate, englishtea,
-  espresso, americanoice, creamercoffee,peachmohito, kenzacola, mango, lemon, mintlemon, hotv60, greentea,
+  espresso, americanoice, creamercoffee,peachmohito, kenzacola, mango, lemon, mintlemon, hotv60, greentea, dietup,
   coffee, caramylcoffee, coldhebisicus, icesignature, pistachio, whitemocha, watermelon, pistachiolatte, ginger,
   saltedcaramyl, macha, v60, creamer2, caramylfrappe, water, orange, avocado, pinacolada, turkishcoffee, sahlab,
-  americano, tea, milktea, anise, gingermilk, gingerlemon, cinnamon
+  americano, tea, milktea, anise, gingermilk, gingerlemon, cinnamon, pepsi, dietpepsi, duet, mirinda, citrus, up,
+  codered, barelymoussy, pomemoussy, applemoussy, lemonmoussy, cheddarcroissant, croissant, thymecroissant, chocolatecroissant,
+  berrymuffin, fruitsalade, icecream, omali, milkrice, waffle, pancake, sweatcrep, oreocups, nutellacups, honeycups,
+  mangocups, redvelvetcups, doubleespresso, latte, icelatte, icepistachiolatte
 } from "@/assets/index";
 import { useState } from 'react';
 
@@ -28,7 +31,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.single',
     calories: "10-20",
     price: 8 ,
-    image: creamer2
+    image: espresso
   },
   {
     id: '2',
@@ -36,7 +39,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.Double Espresso',
     calories: "5-10",
     price: 10,
-    image: creamercoffee
+    image: doubleespresso
   },
   {
     id: '3',
@@ -52,7 +55,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.mocha.desc',
     calories: "120-170",
     price: 13,
-    image: creamer2
+    image: latte
   },
   {
     id: '5',
@@ -242,7 +245,7 @@ const cold =
     // descKey: 'menu.frappuccino.desc',
     calories: "120-170",
     price: 13,
-    image: creamercoffee,
+    image: icelatte,
     },{
     id: '2',
     nameKey: 'Today\'s coffee',
@@ -270,7 +273,7 @@ const cold =
     // descKey: 'menu.frappuccino.desc',
     calories: "250-320",
     price: 15,
-    image: pistachio
+    image: icepistachiolatte
   },{
     id: '6',
     nameKey: 'caramylcoffee',
@@ -312,7 +315,7 @@ const cold =
     // descKey: 'menu.frappuccino.desc',
     calories: "230-300",
     price: 14,
-    image: creamer2
+    image: spanishlatte
   },{
     id: '12',
     nameKey: 'Iced Caramel Macchiato',
@@ -385,7 +388,7 @@ const cold =
     image: coldhebisicus
   },{
     id: '22',
-    nameKey: 'Red Code Mojito',
+    nameKey: 'Code Red Mojito',
     // descKey: 'menu.frappuccino.desc',
     calories: "0",
     price: 17,
@@ -405,27 +408,27 @@ const cold =
 
 // مأكولات — use translation keys from LanguageContext
 const food = [
-  { id: '1', nameKey: 'Shedder Croissant', calories: '345', price: 5, image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=400&h=300&fit=crop' },
-  { id: '2', nameKey: 'croissant', calories: '305', price: 5, image: 'https://images.unsplash.com/photo-1546549030-c3b5b6a4b5c1?w=400&h=300&fit=crop' },
-  { id: '3', nameKey: 'Thyme croissant', calories: '345', price: 5, image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop' },
-  { id: '4', nameKey: 'Chocolate croissant', calories: '370', price: 5, image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=400&h=300&fit=crop' },
-  { id: '5', nameKey: 'Cheese Cake', calories: '350-410', price: 15, image: 'https://images.unsplash.com/photo-1542444459-db63f6d3f2d1?w=400&h=300&fit=crop' },
-  { id: '6', nameKey: 'Vanilla Cookies', calories: '650-725', price: 8, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55f78?w=400&h=300&fit=crop' },
-  { id: '7', nameKey: 'Chocolate Cookies', calories: '389', price: 8, image: 'https://images.unsplash.com/photo-1606756799130-8ce4d05f6a52?w=400&h=300&fit=crop' },
-  { id: '8', nameKey: 'Chocolate Muffin', calories: '350-450', price: 8, image: 'https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?w=400&h=300&fit=crop' },
-  { id: '9', nameKey: 'Blueberry Muffin', calories: '350-450', price: 8, image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop' },
-  { id: '10', nameKey: 'Fruit Salade', calories: '120-200', price: 13, image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=300&fit=crop' },
-  { id: '11', nameKey: 'Ice Cream', calories: '150-250', price: 10, image: 'https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?w=400&h=300&fit=crop' },
-  { id: '12', nameKey: 'Om Ali', calories: '218', price: 12, image: 'https://images.unsplash.com/photo-1604909053221-4d7f6f2b9a1b?w=400&h=300&fit=crop' },
-  { id: '13', nameKey: 'Milk Rice', calories: '320', price: 10, image: 'https://images.unsplash.com/photo-1604908813198-5b2b5a0b4c3a?w=400&h=300&fit=crop' },
-  { id: '14', nameKey: 'Waffle', calories: '350-410', price: 16, image: 'https://images.unsplash.com/photo-1546549030-c3b5b6a4b5c1?w=400&h=300&fit=crop' },
-  { id: '15', nameKey: 'Pancake', calories: '90-100', price: 15, image: 'https://images.unsplash.com/photo-1509475826633-fed577a2c71b?w=400&h=300&fit=crop' },
-  { id: '16', nameKey: 'Sweat Crepe', calories: '300-500', price: 16, image: 'https://images.unsplash.com/photo-1511688878356-3b6f6a3a4dd7?w=400&h=300&fit=crop' },
-  { id: '17', nameKey: 'Oreo Cups', calories: '420-480', price: 10, image: 'https://images.unsplash.com/photo-1589308078053-6c57b3b9b6c0?w=400&h=300&fit=crop' },
-  { id: '18', nameKey: 'Nutella Cups', calories: '430-500', price: 10, image: 'https://images.unsplash.com/photo-1606312619346-0f2d6b4b8e7b?w=400&h=300&fit=crop' },
-  { id: '19', nameKey: 'Honey Cups', calories: '350-420', price: 10, image: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400&h=300&fit=crop' },
-  { id: '20', nameKey: 'Mango Cups', calories: '300-360', price: 10, image: 'https://images.unsplash.com/photo-1589307002192-9a3d9c8b7b3a?w=400&h=300&fit=crop' },
-  { id: '21', nameKey: 'Red Velvet Cups', calories: '430-500', price: 10, image: 'https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=400&h=300&fit=crop' }
+  { id: '1', nameKey: 'Shedder Croissant', calories: '345', price: 5, image: cheddarcroissant },
+  { id: '2', nameKey: 'croissant', calories: '305', price: 5, image: croissant },
+  { id: '3', nameKey: 'Thyme croissant', calories: '345', price: 5, image: thymecroissant },
+  { id: '4', nameKey: 'Chocolate croissant', calories: '370', price: 5, image: chocolatecroissant },
+  { id: '5', nameKey: 'Cheese Cake', calories: '350-410', price: 15, image: cheesecake },
+  { id: '6', nameKey: 'Vanilla Cookies', calories: '650-725', price: 8, image: cookies2 },
+  { id: '7', nameKey: 'Chocolate Cookies', calories: '389', price: 8, image: chocolatecookies },
+  { id: '8', nameKey: 'Chocolate Muffin', calories: '350-450', price: 8, image: cupcake },
+  { id: '9', nameKey: 'Blueberry Muffin', calories: '350-450', price: 8, image: berrymuffin },
+  { id: '10', nameKey: 'Fruit Salade', calories: '120-200', price: 13, image: fruitsalade },
+  { id: '11', nameKey: 'Ice Cream', calories: '150-250', price: 10, image: icecream },
+  { id: '12', nameKey: 'Om Ali', calories: '218', price: 12, image: omali },
+  { id: '13', nameKey: 'Milk Rice', calories: '320', price: 10, image: milkrice },
+  { id: '14', nameKey: 'Waffle', calories: '350-410', price: 16, image: waffle },
+  { id: '15', nameKey: 'Pancake', calories: '90-100', price: 15, image: pancake },
+  { id: '16', nameKey: 'Sweat Crepe', calories: '300-500', price: 16, image: sweatcrep },
+  { id: '17', nameKey: 'Oreo Cups', calories: '420-480', price: 10, image: oreocups },
+  { id: '18', nameKey: 'Nutella Cups', calories: '430-500', price: 10, image: nutellacups },
+  { id: '19', nameKey: 'Honey Cups', calories: '350-420', price: 10, image: honeycups },
+  { id: '20', nameKey: 'Mango Cups', calories: '300-360', price: 10, image: mangocups },
+  { id: '21', nameKey: 'Red Velvet Cups', calories: '430-500', price: 10, image: redvelvetcups}
 ];
 
 // عصائر / Juices — dedicated juices section
@@ -446,22 +449,22 @@ const sodas: MenuItem[] = [
   { id: '23',nameKey: 'Kenza Cola',calories: "157", price:4, image: kenzacola},
   {id: '24', nameKey: 'Kinza Orange', calories: "6", price: 4, image: kenzaorange },
   {id: '25', nameKey: 'Kinza Citrus', calories: "61", price: 4, image: kenzalemon},
-  { id: '26', nameKey: 'Pepsi', calories: "156", price: 5, image: creamercoffee },
-  { id: '27', nameKey: 'Diet Pepsi', calories: "0", price: 5, image: creamer2},
-  { id: '28', nameKey: 'Duet', calories: "158", price: 5, image: coffee},
-  { id: '29', nameKey: 'Miranda', calories: "179", price: 5, image: creamercoffee },
-  { id: '30', nameKey: 'Citrus', calories: "179", price: 5, image: cappuchino },
-  { id: '31', nameKey: '7Up', calories: "157", price: 5, image: flatwhite },
-  { id: '32', nameKey: 'Diet 7Up', calories: "6", price: 5, image: cortado },
-  { id: '33', nameKey: 'Red Code', calories: "61", price: 7, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
+  { id: '26', nameKey: 'Pepsi', calories: "156", price: 5, image: pepsi },
+  { id: '27', nameKey: 'Diet Pepsi', calories: "0", price: 5, image: dietpepsi},
+  { id: '28', nameKey: 'Duet', calories: "158", price: 5, image: duet},
+  { id: '29', nameKey: 'Mirinda', calories: "179", price: 5, image: mirinda },
+  { id: '30', nameKey: 'Citrus', calories: "179", price: 5, image: citrus },
+  { id: '31', nameKey: '7Up', calories: "157", price: 5, image: up },
+  { id: '32', nameKey: 'Diet 7Up', calories: "6", price: 5, image: dietup },
+  { id: '33', nameKey: 'Code Red', calories: "61", price: 7, image: codered },
   
   
   
   // desserts moved into sodas
-  { id: '34', nameKey: 'Barely Mousse', calories: "17", price: 8, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '35', nameKey: 'Pomegranate Mousse', calories: "40", price: 8, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '36', nameKey: 'Apple Mousse', calories: "19", price: 8, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '37', nameKey: 'Lemon Mint Mousse', calories: "39", price: 8, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' }
+  { id: '34', nameKey: 'Barely Moussy', calories: "17", price: 8, image: barelymoussy},
+  { id: '35', nameKey: 'Pomegranate Moussy', calories: "40", price: 8, image: pomemoussy },
+  { id: '36', nameKey: 'Apple Moussy', calories: "19", price: 8, image: applemoussy },
+  { id: '37', nameKey: 'Lemon Mint Moussy', calories: "39", price: 8, image: lemonmoussy}
 ];
 
 // Group sections: hot (original `menuItems`), cold and food

@@ -2,9 +2,11 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from "@/assets/logo.png";
+import { useNavigate } from 'react-router-dom';
 
 export function Navbar() {
   const { language, toggleLanguage, t } = useLanguage();
+  const navigate= useNavigate();
 
   return (
     <motion.nav
@@ -20,6 +22,7 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
             className="flex items-center"
+             onClick={() =>navigate("/")}
           >
             <img 
               src={logo} 
@@ -29,7 +32,7 @@ export function Navbar() {
           </motion.div>
 
           {/* Navigation Links */}
-          <div className={`hidden md:flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
+          <div className={` md:flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             <motion.a
               href="/"
               whileHover={{ scale: 1.05 }}

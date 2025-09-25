@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock, Music } from 'lucide-react';
+import cafe from '@/assets/images/cafe.jpeg';
 
 const About = () => {
   const { language, t } = useLanguage();
@@ -12,20 +13,23 @@ const About = () => {
 
   const socialLinks = [
     {
-      name: 'Facebook',
+      name: t('about.Facebook'),
+      labelkey: 'about.Facebook',
       icon: Facebook,
       url: 'https://www.facebook.com/NejmtHourCafe',
       color: 'hover:text-blue-600'
     },
     {
-      name: 'Instagram',
+      name: t('about.Instagram'),
+      labelkey: 'about.Instagram',
       icon: Instagram,
       url: 'https://www.instagram.com/nejmthourcafe/?igsh=MTk3eW9jeDBqZDhmZw%3D%3D#',
       color: 'hover:text-pink-600'
     }
     ,
     {
-      name: 'TikTok',
+      name: t('about.TikTok'),
+      labelKey: 'about.TikTok',
       icon: Music,
       url: 'https://www.tiktok.com/@starhour4325157727811?_t=ZS-9007yFiVkKP&_r=1',
       color: 'hover:text-black'
@@ -113,7 +117,7 @@ const About = () => {
                 className="relative"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&h=400&fit=crop"
+                  src={cafe}
                   alt="Coffee Shop Interior"
                   className="w-full rounded-2xl coffee-shadow-lg"
                 />
