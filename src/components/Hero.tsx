@@ -6,7 +6,7 @@ export function Hero() {
   const { language, t } = useLanguage();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center bg-hero-gradient overflow-hidden">
+  <section className="relative min-h-[75vh] flex items-center justify-center bg-hero-gradient overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-coffee-light/10 to-coffee-medium/10"></div>
@@ -42,18 +42,17 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button
-              size="lg"
-              className="bg-coffee-dark text-coffee-cream hover:bg-coffee-medium hover:text-coffee-cream smooth-transition px-8 py-4 text-lg font-semibold coffee-shadow-lg"
-            >
-              {t('hero.orderNow')}
-            </Button>
-            
+          > 
             <Button
               variant="outline"
-              size="lg"
-              className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream smooth-transition px-8 py-4 text-lg font-medium"
+              size="xl"
+              className="border-coffee-dark text-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream smooth-transition px-8 py-2 text-2xl font-medium"
+              onClick={() => {
+                const el = document.getElementById('menu-chips');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+              }}
             >
               {t('hero.ourMenu')}
             </Button>

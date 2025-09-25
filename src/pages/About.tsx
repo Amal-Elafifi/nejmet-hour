@@ -4,37 +4,40 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock, Music } from 'lucide-react';
 
 const About = () => {
   const { language, t } = useLanguage();
+  const mapsUrl = 'https://www.google.com/maps/place/%D9%83%D8%A7%D9%81%D9%8A%D9%87+%D9%86%D8%AC%D9%85%D8%A9+%D8%AD%D9%88%D8%B1+-+Nejmt+Hour+Cafe%E2%80%AD/@26.4567314,50.0897614,17z/data=!3m1!4b1!4m6!3m5!1s0x3e49fd0bdc460a21:0x4983ac8b903dd6d5!8m2!3d26.4567266!4d50.0923363!16s%2Fg%2F11zhm9qyvd?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D';
 
   const socialLinks = [
     {
       name: 'Facebook',
       icon: Facebook,
-      url: 'https://facebook.com/nejmt.hour.cafe',
+      url: 'https://www.facebook.com/NejmtHourCafe',
       color: 'hover:text-blue-600'
     },
     {
       name: 'Instagram',
       icon: Instagram,
-      url: 'https://instagram.com/nejmt.hour.cafe',
+      url: 'https://www.instagram.com/nejmthourcafe/?igsh=MTk3eW9jeDBqZDhmZw%3D%3D#',
       color: 'hover:text-pink-600'
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      url: 'https://twitter.com/nejmt_hour_cafe',
-      color: 'hover:text-blue-400'
     }
+    ,
+    {
+      name: 'TikTok',
+      icon: Music,
+      url: 'https://www.tiktok.com/@starhour4325157727811?_t=ZS-9007yFiVkKP&_r=1',
+      color: 'hover:text-black'
+    }
+    
   ];
 
   const contactInfo = [
     {
       icon: MapPin,
       labelKey: 'about.address',
-      value: language === 'ar' ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'
+      value: t('about.addressValue')
     },
     {
       icon: Phone,
@@ -42,9 +45,15 @@ const About = () => {
       value: '+966 50 123 4567'
     },
     {
-      icon: Mail,
-      labelKey: 'about.email',
-      value: 'info@nejmt-hour-cafe.com'
+      icon: Phone,
+      labelKey: 'whatsapp',
+      value: '+966574827282',
+      href: 'https://api.whatsapp.com/send?phone=966574827282'
+    },
+    {
+      icon: Clock,
+      labelKey: 'about.hoursTitle',
+      value: language === 'ar' ? t('about.hoursValue') : t('about.hoursValue')
     }
   ];
 
@@ -90,6 +99,9 @@ const About = () => {
                 </p>
                 <p className={`text-coffee-medium leading-relaxed ${language === 'ar' ? 'font-arabic' : ''}`}>
                   {t('about.storyP2')}
+                </p>
+                <p className={`text-coffee-medium leading-relaxed mt-4 ${language === 'ar' ? 'font-arabic' : ''}`}>
+                  {t('about.storyExtra')}
                 </p>
               </motion.div>
               
@@ -152,9 +164,23 @@ const About = () => {
                             <p className={`font-medium text-coffee-dark ${language === 'ar' ? 'font-arabic' : ''}`}>
                               {t(item.labelKey)}
                             </p>
-                            <p className="text-coffee-medium">
-                              {item.value}
-                            </p>
+                            {item.labelKey === 'about.address' ? (
+                              <p className="text-coffee-medium">
+                                <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-coffee-dark">
+                                  {item.value}
+                                </a>
+                              </p>
+                            ) : item.href ? (
+                              <p className="text-coffee-medium">
+                                <a href={item.href} target="_blank" rel="noopener noreferrer" className="underline hover:text-coffee-dark">
+                                  {item.value}
+                                </a>
+                              </p>
+                            ) : (
+                              <p className="text-coffee-medium">
+                                {item.value}
+                              </p>
+                            )}
                           </div>
                         </div>
                       ))}
@@ -228,7 +254,8 @@ const About = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-coffee-cream text-coffee-cream hover:bg-coffee-cream hover:text-coffee-dark smooth-transition px-8 py-4 text-lg font-semibold"
+                className="border-coffee-cream text-white hover:bg-coffee-cream hover:text-coffee-dark smooth-transition px-8 py-4 text-lg font-semibold"
+                onClick={() => window.open(mapsUrl, '_blank', 'noopener')}
               >
                 {t('about.findUs')}
               </Button>

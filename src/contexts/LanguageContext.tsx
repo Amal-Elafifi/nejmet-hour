@@ -25,7 +25,9 @@ const translations = {
     'menu.subtitle': 'Discover our carefully crafted beverages and treats',
     'menu.sub-heading-1': 'Cold Drinks',
     'menu.sub-heading-2': 'Hot Drinks',
-    'menu.sub-heading-3': 'Food',
+    'menu.sub-heading-3': 'Desserts',
+    'menu.sub-heading-4': 'Juices',
+    'menu.sub-heading-5': 'Soda Drinks',
     'menu.calories': 'cal',
     'menu.sar': 'SAR',
     
@@ -50,17 +52,20 @@ const translations = {
     'about.storyTitle': 'Our Story',
     'about.storyP1': 'NEJMT HOUR Café was born from a deep passion for authentic Arabic coffee and a desire to create an exceptional coffee experience. We believe that every cup of coffee tells a story, and our story begins with the finest, carefully selected coffee beans.',
     'about.storyP2': 'In our café, we blend authentic Arabian heritage with modernity, creating a warm and welcoming space where guests can enjoy the finest coffee and hot beverages.',
+    'about.storyExtra': "In a quiet corner of the Al-Zohour neighborhood you'll find a cozy café calling you with warmth ☕🤎. Here, we craft your most beautiful moments with company, comfort, and calm — where the aroma of coffee meets the spirit of the place.",
     'about.connectTitle': 'Connect With Us',
     'about.connectSubtitle': 'Stay connected and discover our latest news and special offers',
     'about.contactInfo': 'Contact Information',
     'about.followUs': 'Follow Us',
+    'about.hoursTitle': 'Work Hours',
+    'about.hoursValue': 'Open from 6:30 AM to 3:00 AM',
     'about.socialDescription': 'Follow us on social media for the latest news and special offers.',
     'about.address': 'Address',
     'about.phone': 'Phone',
-    'about.email': 'Email',
     'about.visitUs': 'Visit Our Café',
     'about.visitDescription': 'We invite you to visit our café and enjoy an unforgettable coffee experience in a comfortable and warm atmosphere.',
     'about.findUs': 'Find Us',
+    'about.addressValue': 'Dammam - Al-Zohour District - Abu Hurairah Street',
     
     // Footer
     'footer.copyright': '© 2025 NEJMT HOUR Café. All rights reserved.',
@@ -71,7 +76,7 @@ const translations = {
     'nav.aboutUs': 'من نحن',
     
     // Hero
-    'hero.welcome': 'مرحباً بكم في مقهى نجمة الساعة',
+    'hero.welcome': 'مرحباً بكم في مقهى نجمة حور',
     'hero.description': 'استمتع بأجود خلطات القهوة في أجواء دافئة ومرحبة. كل كوب يحكي قصة.',
     'hero.orderNow': 'اطلب الآن',
     'hero.ourMenu': 'قائمتنا',
@@ -81,8 +86,10 @@ const translations = {
     'menu.subtitle': 'اكتشف مشروباتنا وحلوياتنا المحضرة بعناية',
     'menu.sub-heading-1': 'مشروبات باردة',
     'menu.sub-heading-2': 'مشروبات ساخنة',
-    'menu.sub-heading-3': 'مأكولات',
-    'menu.calories': 'سعرة',
+    'menu.sub-heading-3': 'حلويات',
+    'menu.sub-heading-4': 'عصائر',
+    'menu.sub-heading-5': 'مشروبات صودا',
+    'menu.calories': 'سعر حراري',
     'menu.sar': 'ريال',
     
     // Products
@@ -129,7 +136,7 @@ const translations = {
     'menu.Salted Caramel': 'سولتد كراميل',
     'menu.Cold Matcha': 'ماتشا بارد',
     'menu.Iced V60': '  ايس V60',
-    'menu.Spanish Latte': 'سبانش لاتيه',
+  // 'menu.Spanish Latte' already defined above
     'menu.Iced Caramel Macchiato': 'ايس كراميل ماكياتو',
     'menu.Mocha Frappuccino': 'موكا فرابتشينو',
     'menu.Caramyl Frappuccino': 'كراميل فرابتشينو',
@@ -164,24 +171,49 @@ const translations = {
     'menu.Watermelon': 'بطيخ',
     'menu.Banana With Milk': 'موز حليب',
     'menu.Mint Lemon': 'ليمون نعناع',
-    'menu.Hibiscus': 'كركديه',
+  // 'menu.Hibiscus' already defined above
    
 
     // ماكولات 
+    'menu.Shedder Croissant': 'كرواسون جبنة شيدر',
+    'menu.croissant': ' كرواسون ساده',
+    'menu.Thyme croissant': 'كرواسون زعتر',
+    'menu.Chocolate croissant': 'كرواسون شيكولاته',
+    'menu.Cheese Cake': 'تشيز كيك',
+    'menu.Vanilla Cookies': 'كوكيز فانيليا',
+    'menu.Chocolate Cookies': 'كوكيز شيكولاته',
+    'menu.Chocolate Muffin': 'مافن شيكولاته',
+    'menu.Blueberry Muffin': 'مافن توت ازرق',
+    'menu.Fruit Salade': 'سلطة فواكه',
+    'menu.Ice Cream': 'آيس كريم',
+    'menu.Om Ali': 'أم علي',
+    'menu.Milk Rice': 'أرز بحليب',
+    'menu.Waffle': 'وافل',
+    'menu.Pancake': 'بان كيك',
+    'menu.Sweat Crepe': 'كريب حلو',
+    'menu.Oreo Cups': ' حلي كاسات اوريو',
+    'menu.Nutella Cups': ' حلي كاسات نوتيلا',
+    'menu.Honey Cups': ' حلي كاسات العسل',
+    'menu.Mango Cups': ' حلي كاسات مانجو',
+    'menu.Red Velvet Cups': 'حلي كاسات رد فيلفيت',
 
-    
-    
-    
+
+
+
+
     // About Us
     'about.title': 'من نحن',
     'about.subtitle': 'قصة شغف القهوة والضيافة العربية الأصيلة',
     'about.storyTitle': 'قصتنا',
-    'about.storyP1': 'تأسس مقهى نجمة الساعة من شغف عميق بالقهوة العربية الأصيلة والرغبة في تقديم تجربة قهوة استثنائية. نحن نؤمن بأن كل كوب قهوة يحكي قصة، وقصتنا تبدأ مع أجود حبوب القهوة المختارة بعناية.',
+    'about.storyP1': 'تأسس مقهى نجمة حور من شغف عميق بالقهوة العربية الأصيلة والرغبة في تقديم تجربة قهوة استثنائية. نحن نؤمن بأن كل كوب قهوة يحكي قصة، وقصتنا تبدأ مع أجود حبوب القهوة المختارة بعناية.',
     'about.storyP2': 'في مقهانا، نمزج بين التراث العربي الأصيل والحداثة، لنخلق مساحة دافئة ومرحبة حيث يمكن للضيوف الاستمتاع بأفضل أنواع القهوة والمشروبات الساخنة.',
+    'about.storyExtra': 'في إحدى زوايا حي الزهور ستجدون مقهًى لطيفًا يناديكم بكل دفء ☕🤎. هنا، نصنع لحظاتكم الأجمل مع الصحبة، الونس، والرواق، حيث يلتقي عبق القهوة مع روح المكان',
     'about.connectTitle': 'تواصل معنا',
     'about.connectSubtitle': 'ابقَ على تواصل معنا واكتشف آخر أخبارنا وعروضنا الخاصة',
     'about.contactInfo': 'معلومات الاتصال',
     'about.followUs': 'تابعنا',
+    'about.hoursTitle': 'مواعيد العمل',
+    'about.hoursValue': 'المواعيد من 6.30 صباحا الى 3 صباحا',
     'about.socialDescription': 'تابعنا على وسائل التواصل الاجتماعي للحصول على آخر الأخبار والعروض الخاصة.',
     'about.address': 'العنوان',
     'about.phone': 'الهاتف',
@@ -189,9 +221,10 @@ const translations = {
     'about.visitUs': 'زوروا مقهانا',
     'about.visitDescription': 'ندعوكم لزيارة مقهانا والاستمتاع بتجربة قهوة لا تُنسى في أجواء مريحة ودافئة.',
     'about.findUs': 'اعثر علينا',
+    'about.addressValue': 'الدمام-حي الزهور-شارع ابو هريرة',
     
     // Footer
-    'footer.copyright': '© ٢٠٢٥ مقهى نجمة الساعة. جميع الحقوق محفوظة.',
+    'footer.copyright': '© ٢٠٢٥ مقهى نجمة حور. جميع الحقوق محفوظة.',
   },
 };
 
@@ -211,7 +244,21 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations['en']] || key;
+    const locale = translations[language] as Record<string, string>;
+    // Try the key as-is, then try with a 'menu.' prefix to support both styles
+    if (typeof locale[key] === 'string') return locale[key];
+    const prefixed = `menu.${key}`;
+    if (typeof locale[prefixed] === 'string') return locale[prefixed];
+    // Try a variant where the first character is lowercased (handles keys like 'menu.single Espresso')
+    if (key.length > 0) {
+      const firstLower = `menu.${key.charAt(0).toLowerCase()}${key.slice(1)}`;
+      if (typeof locale[firstLower] === 'string') return locale[firstLower];
+    }
+    // Try fully lowercased menu key
+    const lowerAll = `menu.${key.toLowerCase()}`;
+    if (typeof locale[lowerAll] === 'string') return locale[lowerAll];
+
+    return key;
   };
 
   return (
