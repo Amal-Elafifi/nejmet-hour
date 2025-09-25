@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
-import {berrycheesecake, bluemohito, cheesecake, cheesecakestraw, chocolatecake,
-  chocolatecake2, chocolatecookies, pomemohito, kenzaorange, kenzalemon,
-  cookies2, cupcake, mohito, mohito2, redmohito, strawberry, whitemohito,
-  espresso, americanoice, creamercoffee,peachmohito, kenzacola,
-  coffee, caramylcoffee, coldhebisicus, icesignature, pistachio, whitemocha, 
-  saltedcaramyl, macha, v60, creamer2, caramylfrappe, water
+import {berrycheesecake, bluemohito, cheesecake, cheesecakestraw, chocolatecake, spanishlatte, hotcaramyl,
+  chocolatecake2, chocolatecookies, pomemohito, kenzaorange, kenzalemon, flatwhite, cortado, frenchcoffee,
+  cookies2, cupcake, mohito, mohito2, redmohito, strawberry, whitemohito, cappuchino, hotchocolate, englishtea,
+  espresso, americanoice, creamercoffee,peachmohito, kenzacola, mango, lemon, mintlemon, hotv60, greentea,
+  coffee, caramylcoffee, coldhebisicus, icesignature, pistachio, whitemocha, watermelon, pistachiolatte, ginger,
+  saltedcaramyl, macha, v60, creamer2, caramylfrappe, water, orange, avocado, pinacolada, turkishcoffee, sahlab,
+  americano, tea, milktea, anise, gingermilk, gingerlemon, cinnamon
 } from "@/assets/index";
 import { useState } from 'react';
 
@@ -27,7 +28,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.single',
     calories: "10-20",
     price: 8 ,
-    image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&h=300&fit=crop'
+    image: creamer2
   },
   {
     id: '2',
@@ -35,7 +36,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.Double Espresso',
     calories: "5-10",
     price: 10,
-    image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&h=300&fit=crop'
+    image: creamercoffee
   },
   {
     id: '3',
@@ -43,7 +44,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.Today\'s coffee',
     calories: "5-15",
     price: 7,
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop'
+    image: coffee
   },
   {
     id: '4',
@@ -51,7 +52,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.mocha.desc',
     calories: "120-170",
     price: 13,
-    image: 'https://images.unsplash.com/photo-1578843147842-355eb25b43d1?w=400&h=300&fit=crop'
+    image: creamer2
   },
   {
     id: '5',
@@ -59,7 +60,7 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.macchiato.desc',
     calories: "100-150",
     price: 13,
-    image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&h=300&fit=crop'
+    image: cappuchino
   },
   {
     id: '6',
@@ -67,168 +68,168 @@ const menuItems: MenuItem[] = [
     // descKey: 'menu.frappuccino.desc',
     calories: "120-160",
     price: 13,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: flatwhite
   },  {
     id: '7',
     nameKey: 'Cortado',
     // descKey: 'menu.frappuccino.desc',
     calories: "60-80",
     price: 12,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: cortado
   },  {
     id: '8',
     nameKey: 'Americano',
     // descKey: 'menu.frappuccino.desc',
     calories: "10-20",
     price: 9,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: americano
   },  {
     id: '9',
     nameKey: 'Caramel Macchiato',
     // descKey: 'menu.frappuccino.desc',
     calories: "220-280",
     price: 14,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: hotcaramyl
   },  {
     id: '10',
     nameKey: 'Spanish Latte',
     // descKey: 'menu.frappuccino.desc',
     calories: "220-300",
     price: 14,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: spanishlatte
   },  {
     id: '11',
     nameKey: 'Pistachio Latte',
     // descKey: 'menu.frappuccino.desc',
     calories: "250-320",
     price: 15,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: pistachiolatte
   },  {
     id: '12',
     nameKey: 'White Mocha',
     // descKey: 'menu.frappuccino.desc',
     calories: "250-320",
     price: 14,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: whitemocha
   },  {
     id: '13',
     nameKey: 'V60',
     // descKey: 'menu.frappuccino.desc',
     calories: "5-15",
     price: 11,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: hotv60
   },  {
     id: '14',
     nameKey: 'Flat White',
     // descKey: 'menu.frappuccino.desc',
     calories: "120-160",
     price: 13,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: flatwhite
   },  {
     id: '15',
     nameKey: 'Matcha',
     // descKey: 'menu.frappuccino.desc',
     calories: "200-260",
     price: 14,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: macha
   },  {
     id: '16',
     nameKey: 'Salted Caramel',
     // descKey: 'menu.frappuccino.desc',
     calories: "250-330",
     price: 15,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: saltedcaramyl
   },  {
     id: '17',
     nameKey: 'Hot Chocolate',
     // descKey: 'menu.frappuccino.desc',
     calories: "280-350",
     price: 12,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: hotchocolate
   },  {
     id: '18',
     nameKey: 'Turkish Coffee',
     // descKey: 'menu.frappuccino.desc',
     calories: "30-50",
     price: 8,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: turkishcoffee
   },  {
     id: '19',
     nameKey: 'French Coffee',
     // descKey: 'menu.frappuccino.desc',
     calories: "180-220",
     price: 10,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: frenchcoffee
   },  {
     id: '20',
     nameKey: 'English Red Tea',
     // descKey: 'menu.frappuccino.desc',
     calories: "0-5",
     price: 4,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: englishtea
   },  {
     id: '21',
     nameKey: 'English Green Tea',
     // descKey: 'menu.frappuccino.desc',
     calories: "0-5",
     price: 4,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: greentea
   },  {
     id: '22',
     nameKey: 'Tea',
     // descKey: 'menu.frappuccino.desc',
     calories: "0-5",
     price: 3,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: tea
   },  {
     id: '23',
     nameKey: 'Tea With Milk',
     // descKey: 'menu.frappuccino.desc',
     calories: "120-180",
     price: 4,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: milktea
   },  {
     id: '24',
     nameKey: 'Anise',
     // descKey: 'menu.frappuccino.desc',
     calories: "0-5",
     price: 4,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: anise
   },  {
     id: '25',
     nameKey: 'Sahlab',
     // descKey: 'menu.frappuccino.desc',
     calories: "180-240",
     price: 10,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: sahlab
   },  {
     id: '26',
     nameKey: 'Ginger',
     // descKey: 'menu.frappuccino.desc',
     calories: "130-190",
     price: 5,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: ginger
   },  {
     id: '27',
     nameKey: 'Ginger With Milk',
     // descKey: 'menu.frappuccino.desc',
     calories: "0-5",
     price: 6,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: gingermilk
   },  {
     id: '28',
     nameKey: 'Ginger With Lemon',
     // descKey: 'menu.frappuccino.desc',
     calories: "5-10",
     price: 5,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: gingerlemon
   },{
     id: '29',
     nameKey: 'Cinnamon',
     // descKey: 'menu.frappuccino.desc',
     calories: "0-5",
     price: 5,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop'
+    image: cinnamon
   }
 ];
 
@@ -429,15 +430,15 @@ const food = [
 
 // عصائر / Juices — dedicated juices section
 const juices: MenuItem[] = [
-  { id: '39', nameKey: 'Mango', calories: "150-180", price: 14, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '40', nameKey: 'Strawberry', calories: "120-150", price: 14, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '41', nameKey: 'Orange', calories: "110-140", price: 11, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '42', nameKey: 'Avocado', calories: "220-280", price: 15, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '43', nameKey: 'Mina Colada', calories: "180-220", price: 16, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '44', nameKey: 'Watermelon', calories: "150-170", price: 10, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '45', nameKey: 'Banana With Milk', calories: "80-110", price: 11, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '46', nameKey: 'Mint Lemon', calories: "220-280", price: 11, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '47', nameKey: 'Hibiscus', calories: "100-140", price: 10, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' }
+  { id: '39', nameKey: 'Mango', calories: "150-180", price: 14, image: mango },
+  { id: '40', nameKey: 'Strawberry', calories: "120-150", price: 14, image: strawberry },
+  { id: '41', nameKey: 'Orange', calories: "110-140", price: 11, image: orange},
+  { id: '42', nameKey: 'Avocado', calories: "220-280", price: 15, image: avocado },
+  { id: '43', nameKey: 'Pina Colada', calories: "180-220", price: 16, image: pinacolada },
+  { id: '44', nameKey: 'Watermelon', calories: "150-170", price: 10, image: watermelon },
+  { id: '45', nameKey: 'Banana With Milk', calories: "80-110", price: 11, image: lemon },
+  { id: '46', nameKey: 'Mint Lemon', calories: "220-280", price: 11, image: mintlemon },
+  { id: '47', nameKey: 'Hibiscus', calories: "100-140", price: 10, image: coldhebisicus}
 ];
 
 // صودا / Sodas — separated from cold drinks (including some desserts moved here)
@@ -445,13 +446,13 @@ const sodas: MenuItem[] = [
   { id: '23',nameKey: 'Kenza Cola',calories: "157", price:4, image: kenzacola},
   {id: '24', nameKey: 'Kinza Orange', calories: "6", price: 4, image: kenzaorange },
   {id: '25', nameKey: 'Kinza Citrus', calories: "61", price: 4, image: kenzalemon},
-  { id: '26', nameKey: 'Pepsi', calories: "156", price: 5, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '27', nameKey: 'Diet Pepsi', calories: "0", price: 5, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '28', nameKey: 'Duet', calories: "158", price: 5, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '29', nameKey: 'Miranda', calories: "179", price: 5, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '30', nameKey: 'Citrus', calories: "179", price: 5, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '31', nameKey: '7Up', calories: "157", price: 5, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
-  { id: '32', nameKey: 'Diet 7Up', calories: "6", price: 5, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
+  { id: '26', nameKey: 'Pepsi', calories: "156", price: 5, image: creamercoffee },
+  { id: '27', nameKey: 'Diet Pepsi', calories: "0", price: 5, image: creamer2},
+  { id: '28', nameKey: 'Duet', calories: "158", price: 5, image: coffee},
+  { id: '29', nameKey: 'Miranda', calories: "179", price: 5, image: creamercoffee },
+  { id: '30', nameKey: 'Citrus', calories: "179", price: 5, image: cappuchino },
+  { id: '31', nameKey: '7Up', calories: "157", price: 5, image: flatwhite },
+  { id: '32', nameKey: 'Diet 7Up', calories: "6", price: 5, image: cortado },
   { id: '33', nameKey: 'Red Code', calories: "61", price: 7, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=300&fit=crop' },
   
   
