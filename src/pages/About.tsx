@@ -50,7 +50,7 @@ const About = () => {
     },
     {
       icon: Phone,
-      labelKey: 'whatsapp',
+      labelKey: t('about.whatsapp'),
       value: '+966574827282',
       href: 'https://api.whatsapp.com/send?phone=966574827282'
     },
