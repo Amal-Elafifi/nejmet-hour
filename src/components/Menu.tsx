@@ -276,7 +276,7 @@ const cold =
     image: icepistachiolatte
   },{
     id: '6',
-    nameKey: 'caramylcoffee',
+    nameKey: 'Caramyl Coffee',
     // descKey: 'menu.frappuccino.desc',
     calories: "280-350",
     price: 16,

@@ -143,6 +143,7 @@ const translations = {
   // 'menu.Spanish Latte' already defined above
     'menu.Iced Caramel Macchiato': 'ايس كراميل ماكياتو',
     'menu.Mocha Frappuccino': 'موكا فرابتشينو',
+    'menu.Caramyl Coffee': 'قهوه بالكراميل',
     'menu.Caramyl Frappuccino': 'كراميل فرابتشينو',
     'menu.Strawberry Mojito': 'موهيتو فراولة',
     'menu.Lemon Mint Mojito': 'موهيتو ليمون نعناع',
